@@ -23,7 +23,7 @@ devtools::install_github("USEPA/useeior@v1.1.0")
 ## Build the model using useeior
 library(useeior)
 # Identify the model specifications file for the selected DIO model
-modelspecs <- "data/", params$modelname, ".yml")
+modelspecs <- paste0("data/", params$modelname, ".yml")
 
 DIO <- useeior::buildModel(params$modelname, configpaths = modelspecs)
 
