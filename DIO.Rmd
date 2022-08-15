@@ -13,19 +13,21 @@ params:
 ## Install useeior version with hybridization
 
 #First check that devtools package is installed
-if (!"devtools"%in%installed_pkg[, "Package"]) {
+if (!"devtools"%in%installed.packages()[, "Package"]) {
     install.packages("devtools")
 }
 library(devtools)
 
-devtools::install_github("USEPA/useeior@v1.1.0")
+#devtools::install_github("USEPA/useeior@v1.1.0")
 
 ## Build the model using useeior
 library(useeior)
 # Identify the model specifications file for the selected DIO model
-modelspecs <- paste0("data/", params$modelname, ".yml")
+modelspec <- paste0(params$modelname, ".yml")
+hybridspec <- "NGCombustion.yml"
+configpaths <- file.path("data", c(modelspec,hybridspec))
 
-DIO <- useeior::buildModel(params$modelname, configpaths = modelspecs)
+DIO <- useeior::buildModel(params$modelname, configpaths)
 
 
 
