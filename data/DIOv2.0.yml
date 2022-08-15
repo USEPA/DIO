@@ -776,7 +776,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIo/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -873,7 +873,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIo/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -893,7 +893,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -913,7 +913,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -933,7 +933,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -953,7 +953,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -973,7 +973,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -993,7 +993,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1013,7 +1013,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1033,7 +1033,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1053,7 +1053,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1073,7 +1073,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1093,7 +1093,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1113,7 +1113,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1133,7 +1133,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1153,7 +1153,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1173,7 +1173,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
@@ -1193,7 +1193,7 @@ Indicators:
     SimpleUnit: ""
     SimpleName: ""  
     StaticSource: TRUE
-    StaticFile: "lciafmt/dio/DIO Valuation_v1.0.0_fa9215b.parquet"
+    StaticFile: "lciafmt/dio/DIO%20Valuation_v1.0.0_fa9215b.parquet"
     FileLocation: "DataCommons"
     ScriptFunctionCall: "getImpactMethod" #function to call for script
     ScriptFunctionParameters: 
