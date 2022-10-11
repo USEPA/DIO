@@ -9,7 +9,7 @@ BasePriceType: "PRO" #producer
 BasewithRedefinitions: FALSE
 CommodityorIndustryType: "Commodity"
 ScrapIncluded: FALSE
-HybridizationSpecs: "NGCombustion" #Name of hybridization yml file.
+HybridizationSpecs: "DIOProcesses" #Name of hybridization yml file.
 
 SatelliteTable:
   WAT:

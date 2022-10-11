@@ -24,7 +24,7 @@ library(devtools)
 library(useeior)
 # Identify the model specifications file for the selected DIO model
 modelspec <- paste0(params$modelname, ".yml")
-hybridspec <- "NGCombustion.yml"
+hybridspec <- "DIOProcesses.yml"
 configpaths <- file.path("data", c(modelspec,hybridspec))
 
 DIO <- useeior::buildModel(params$modelname, configpaths)
