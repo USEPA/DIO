@@ -1206,24 +1206,10 @@ Indicators:
         URL: "https://doi.org/10.1007/s11367-016-1246-y"
         Primary: TRUE
 DemandVectors:
-    Consumption:
-      Type: "Consumption"
-      Year: 2012
-      System: "Complete"
-      Location: "US"
-    Production:
-      Type: "Production"
-      Year: 2012
-      System: "Complete"
-      Location: "US"
+    DefaultDemand: "DefaultDemandVectors" # Name of default demand vectors yml file
     HouseholdConsumption:
       Type: "Consumption"
       Year: 2012
       System: "Household"
       Location: "US"
-    DomesticConsumption:
-      Type: "Consumption"
-      Year: 2012
-      System: "Domestic"
-      Location: "US"    
 
