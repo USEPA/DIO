@@ -1,4 +1,4 @@
-Model: "DIOv2.0"
+Model: "DIOv2.0" # Mimics structure of USEEIOv2.0.1-411
 BaseIOSchema: 2012
 BaseIOLevel: "Detail"
 IOYear: 2012 # Year for IO data
@@ -9,6 +9,7 @@ BasePriceType: "PRO" #producer
 BasewithRedefinitions: FALSE
 CommodityorIndustryType: "Commodity"
 ScrapIncluded: FALSE
+DisaggregationSpecs: "WasteDisaggregationDetail"
 HybridizationSpecs: "DIOProcesses" #Name of hybridization yml file.
 
 SatelliteTable:
