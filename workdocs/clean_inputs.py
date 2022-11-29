@@ -54,13 +54,11 @@ B['Location'] = B['ProcessID'].map(locations)
 B['Location'] = B['Location'].replace({'Global / Unspecified': 'Global'})
 
 #%%
-from flowsa.location import us_state_abbrev
 A['Location'] = A['Location'].replace({'United States': 'US'})
 A['Location'] = A['Location'].str.strip()
-B['Location'] = B['Location'].replace({'United States': 'US'})
-B['Location'] = np.where(B['Location'].isin(us_state_abbrev.keys()),
-                         'US', B['Location'])
 
+# align locations from A matrix to B matrix
+B['Location'] = B['ProcessID'].map(dict(zip(A.ProcessID, A.Location)))
 
 #%% Upload revised csv
 (A.to_csv(datapath/'A_matrix_DIO.csv', index=False)
