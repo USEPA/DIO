@@ -17,4 +17,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    df = lciafmt.get_mapped_method('DIO_valuation')
+    df = lciafmt.get_mapped_method('DIO Valuation')
