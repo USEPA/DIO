@@ -1,4 +1,4 @@
-Model: "DIOv2.0"
+Model: "DIOv2.0" # Mimics structure of USEEIOv2.0.1-411
 BaseIOSchema: 2012
 BaseIOLevel: "Detail"
 IOYear: 2012 # Year for IO data
@@ -9,14 +9,15 @@ BasePriceType: "PRO" #producer
 BasewithRedefinitions: FALSE
 CommodityorIndustryType: "Commodity"
 ScrapIncluded: FALSE
-HybridizationSpecs: "NGCombustion" #Name of hybridization yml file.
+DisaggregationSpecs: "WasteDisaggregationDetail"
+HybridizationSpecs: "DIOProcesses" #Name of hybridization yml file.
 
 SatelliteTable:
   WAT:
     FullName: "Water withdrawals"
     Abbreviation: "WAT"
     StaticSource: TRUE
-    StaticFile: "flowsa/FlowBySector/Water_national_2015_m1_v0.1_864d573.parquet"
+    StaticFile: "flowsa/FlowBySector/Water_national_2015_m1_v1.0.1_0470867.parquet"
     FileLocation: "DataCommons"
     DataYears: [2015]
     Locations: ["US"]
@@ -37,7 +38,8 @@ SatelliteTable:
     FullName: "Criteria and Hazardous Air Emissions"
     Abbreviation: "CHAIR"
     StaticSource: TRUE
-    StaticFile: "flowsa/FlowBySector/CAP_HAP_national_2017_v0.1_864d573.parquet"
+    # StaticFile: "flowsa/FlowBySector/CAP_HAP_national_2017_v0.3.1_f3cdf5b.parquet"
+    StaticFile: "flowsa/FlowBySector/CAP_HAP_national_2017_m2_v1.3.1_762d112.parquet" # secondary contexts
     FileLocation: "DataCommons"
     DataYears: [2017]
     Locations: ["US"]
@@ -64,7 +66,7 @@ SatelliteTable:
     FullName: "Point source industrial releases to ground"
     Abbreviation: "GRDREL"
     StaticSource: TRUE
-    StaticFile: "flowsa/FlowBySector/GRDREL_national_2017_v0.1_864d573.parquet"
+    StaticFile: "flowsa/FlowBySector/GRDREL_national_2017_v0.3.1_f3cdf5b.parquet"
     FileLocation: "DataCommons"
     DataYears: [2017]
     Locations: ["US"]
@@ -85,7 +87,7 @@ SatelliteTable:
     FullName: "Point source releases to water"
     Abbreviation: "WATREL"
     StaticSource: TRUE
-    StaticFile: "flowsa/FlowBySector/TRI_DMR_national_2017_v0.1_864d573.parquet"
+    StaticFile: "flowsa/FlowBySector/TRI_DMR_national_2017_v0.3.1_f3cdf5b.parquet"
     FileLocation: "DataCommons"
     DataYears: [2017]
     Locations: ["US"]
@@ -112,7 +114,7 @@ SatelliteTable:
     FullName: "Greenhouse Gases"
     Abbreviation: "GHG"
     StaticSource: TRUE
-    StaticFile: "useeior/NGHGIAM_GHG_TotalsBySector.csv"
+    StaticFile: "useeior/NGHGIAM_GHG_TotalsBySector_wUUIDs.csv"
     FileLocation: "DataCommons"
     DataYears: [2016]
     Locations: ["US"]
@@ -131,7 +133,7 @@ SatelliteTable:
     FullName: "Land use"
     Abbreviation: "LAND"
     StaticSource: TRUE
-    StaticFile: "flowsa/FlowBySector/Land_national_2012_v0.1.1_66af8ab.parquet"
+    StaticFile: "flowsa/FlowBySector/Land_national_2012_v1.0.1_0470867.parquet"
     FileLocation: "DataCommons"
     DataYears: [2012]
     Locations: ["US"]
@@ -170,7 +172,7 @@ SatelliteTable:
     FullName: "Mineral extraction"
     Abbreviation: "MINE"
     StaticSource: TRUE
-    StaticFile: "useeior/USEEIOv1.1_MINE_TotalsBySector_FEDEFL.csv"
+    StaticFile: "useeior/USEEIOv1.1_MINE_TotalsBySector_FEDEFL_wUUIDs.csv"
     FileLocation: "DataCommons"
     DataYears: [2014]
     Locations: ["US"]
@@ -189,7 +191,7 @@ SatelliteTable:
     FullName: "Energy extraction"
     Abbreviation: "ENERGY"
     StaticSource: TRUE
-    StaticFile: "useeior/USEEIOv1.1_Energy_TotalsBySector_FEDEFL.csv"
+    StaticFile: "useeior/USEEIOv1.1_Energy_TotalsBySector_FEDEFL_wUUIDs.csv"
     FileLocation: "DataCommons"
     DataYears: [2014]
     Locations: ["US"]
@@ -214,7 +216,7 @@ SatelliteTable:
     FullName: "Nitrogen and Phosphorus Releases from Agriculture"
     Abbreviation: "NPAG"
     StaticSource: TRUE
-    StaticFile: "useeior/USEEIOv1.1_NPAG_TotalsBySector.csv"
+    StaticFile: "useeior/USEEIOv1.1_NPAG_TotalsBySector_wUUIDs.csv"
     FileLocation: "DataCommons"
     DataYears: [2013, 2015]
     Locations: ["US"]
@@ -263,7 +265,7 @@ SatelliteTable:
     FullName: "Pesticide releases"
     Abbreviation: "PEST"
     StaticSource: TRUE
-    StaticFile: "useeior/USEEIOv1.1_PEST_TotalsBySector.csv"
+    StaticFile: "useeior/USEEIOv1.1_PEST_TotalsBySector_wUUIDs.csv"
     FileLocation: "DataCommons"
     DataYears: [2004, 2005, 2010, 2011, 2012, 2013, 2014]
     Locations: ["US"]
@@ -350,7 +352,7 @@ SatelliteTable:
     FullName: "Commercial RCRA-defined hazardous waste"
     Abbreviation: "CRHW"
     StaticSource: TRUE
-    StaticFile: "flowsa/FlowBySector/CRHW_national_2017_v0.1_864d573.parquet"
+    StaticFile: "flowsa/FlowBySector/CRHW_national_2017_v0.3.1_f3cdf5b.parquet"
     FileLocation: "DataCommons"
     DataYears: [2017]
     Locations: ["US"]
@@ -371,7 +373,7 @@ SatelliteTable:
     FullName: "Employment"
     Abbreviation: "EMP"
     StaticSource: TRUE
-    StaticFile: "flowsa/FlowBySector/Employment_national_2017_v0.1.1_66af8ab.parquet"
+    StaticFile: "flowsa/FlowBySector/Employment_national_2017_v0.3.1_f3cdf5b.parquet"
     FileLocation: "DataCommons"
     DataYears: [2017]
     Locations: ["US"]
@@ -1206,24 +1208,10 @@ Indicators:
         URL: "https://doi.org/10.1007/s11367-016-1246-y"
         Primary: TRUE
 DemandVectors:
-    Consumption:
-      Type: "Consumption"
-      Year: 2012
-      System: "Complete"
-      Location: "US"
-    Production:
-      Type: "Production"
-      Year: 2012
-      System: "Complete"
-      Location: "US"
+    DefaultDemand: "DefaultDemandVectors" # Name of default demand vectors yml file
     HouseholdConsumption:
       Type: "Consumption"
       Year: 2012
       System: "Household"
       Location: "US"
-    DomesticConsumption:
-      Type: "Consumption"
-      Year: 2012
-      System: "Domestic"
-      Location: "US"    
 

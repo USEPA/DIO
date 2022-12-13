@@ -19,15 +19,33 @@ if (!"devtools"%in%installed.packages()[, "Package"]) {
 library(devtools)
 
 #devtools::install_github("USEPA/useeior@v1.1.0")
+# devtools::load_all("../useeior")
 
 ## Build the model using useeior
 library(useeior)
+library(logging)
 # Identify the model specifications file for the selected DIO model
 modelspec <- paste0(params$modelname, ".yml")
-hybridspec <- "NGCombustion.yml"
+hybridspec <- "DIOProcesses.yml"
 configpaths <- file.path("data", c(modelspec,hybridspec))
 
+log_file <- "model/build_and_save_DIO_model.log"
+if (file.exists(log_file)){
+  file.remove(log_file)
+}
+addHandler(writeToFile, file=log_file)
+
 DIO <- useeior::buildModel(params$modelname, configpaths)
+useeior::writeModeltoXLSX(DIO, 'model')
+loginfo("Saving model to model/DIO.rds")
+saveRDS(DIO, "model/DIO.rds") 
+
+# model <- initializeModel(params$modelname, configpaths)
+# model <- loadIOData(model, configpaths)
+# model <- loadandbuildSatelliteTables(model)
+# model <- loadandbuildIndicators(model)
+# model <- loadDemandVectors(model)
+# model <- constructEEIOMatrices(model)
 
 
 
