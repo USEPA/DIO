@@ -10,6 +10,7 @@ params:
 
 ```{r setup, include=FALSE}
 
+
 ## Install useeior version with hybridization
 
 #First check that devtools package is installed
@@ -36,9 +37,7 @@ if (file.exists(log_file)){
 addHandler(writeToFile, file=log_file)
 
 DIO <- useeior::buildModel(params$modelname, configpaths)
-useeior::writeModeltoXLSX(DIO, 'model')
-loginfo("Saving model to model/DIO.rds")
-saveRDS(DIO, "model/DIO.rds") 
+
 
 # model <- initializeModel(params$modelname, configpaths)
 # model <- loadIOData(model, configpaths)
@@ -62,10 +61,43 @@ print(paste("Number of sectors failing:",econval$N_Fail))
 print(paste("Sectors failing:", paste(econval$Failure$rownames, collapse = ", ")))
 ```
 
+Validate that flow totals by commodity (E_c) can be recalculated (within 1%) using the model satellite matrix (B), market shares matrix (V_n), total requirements matrix (L), and demand vector (y) for US production 
+```{r}
+modelval <- compareEandLCIResult(DIO, tolerance = 0.01)
+print(paste("Number of flow totals by commodity passing:",modelval$N_Pass))
+print(paste("Number of flow totals by commodity failing:",modelval$N_Fail))
+#print(paste("Sectors failing:", paste(modelval$Failure$variable, collapse = ", ")))
+```
+
+Validate that commodity output can be recalculated (within 1%) with model total domestic requirements matrix (L_d) and model demand (y) for US production
+```{r}
+econval <- compareOutputandLeontiefXDemand(DIO,use_domestic=TRUE, tolerance = 0.01)
+print(paste("Number of sectors passing:",econval$N_Pass))
+print(paste("Number of sectors failing:",econval$N_Fail))
+print(paste("Sectors failing:", paste(econval$Failure$rownames, collapse = ", ")))
+```
+
+Validate that commodity output are properly transformed to industry output via MarketShare
+```{r}
+q_x_val <- compareCommodityOutputXMarketShareandIndustryOutputwithCPITransformation(DIO, tolerance = 0.01)
+print(paste("Number of flow totals by commodity passing:",q_x_val$N_Pass))
+print(paste("Number of flow totals by commodity failing:",q_x_val$N_Fail))
+print(paste("Sectors with flow totals failing:", paste(q_x_val$Failure$rownames, collapse = ", ")))
+```
+
+Validate that commodity output equals to domestic use plus production demand
+```{r}
+q_val <- compareCommodityOutputandDomesticUseplusProductionDemand(DIO, tolerance = 0.01)
+print(paste("Number of flow totals by commodity passing:",q_val$N_Pass))
+print(paste("Number of flow totals by commodity failing:",q_val$N_Fail))
+print(paste("Sectors with flow totals failing:", paste(q_val$Failure$rownames, collapse = ", ")))
+```
 
 
-Write the model to Excel
+Write the model to Excel and a log to a log file
 ```{r setup, include=FALSE}
+useeior::writeModeltoXLSX(DIO, 'model')
+
 
 useeior::writeModeltoXLSX(DIO,"../DIOv2.xlsx")
 ```
