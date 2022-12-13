@@ -39,7 +39,7 @@ SatelliteTable:
     Abbreviation: "CHAIR"
     StaticSource: TRUE
     # StaticFile: "flowsa/FlowBySector/CAP_HAP_national_2017_v0.3.1_f3cdf5b.parquet"
-    StaticFile: "flowsa/FlowBySector/CAP_HAP_national_2017_m2_v1.3.1_4efcd5a.parquet" # secondary contexts
+    StaticFile: "flowsa/FlowBySector/CAP_HAP_national_2017_m2_v1.3.1_762d112.parquet" # secondary contexts
     FileLocation: "DataCommons"
     DataYears: [2017]
     Locations: ["US"]
