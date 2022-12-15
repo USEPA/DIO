@@ -1,15 +1,58 @@
 ## Load the RDS of the built model
 
-## Validate the Model
+``` r
+# Load useeior to get access to built-in validation functions.
+library(useeior)
+packageVersion("useeior")
+```
 
-Load useeior to get access to built-in validation functions.
+    ## [1] '1.1.1'
+
+``` r
+# Read the built DIO v2.0 model
+DIO <- readRDS("model/DIO.rds")
+```
+
+## Basic Model Info
+
+``` r
+print(paste("The model name is", DIO$specs$Model))
+```
+
+    ## [1] "The model name is DIOv2.0"
+
+``` r
+print(paste("The model has",length(DIO$Commodities$Code), "commodities,", length(DIO$SatelliteTables$flows$Flowable), "unique flows, and",length(DIO$Indicators$meta$Name), "indicators."))
+```
+
+    ## [1] "The model has 807 commodities, 5185 unique flows, and 39 indicators."
+
+``` r
+print(paste("The model IO Year is",DIO$specs$IOYear))
+```
+
+    ## [1] "The model IO Year is 2012"
+
+``` r
+print(paste("The model is capable of performing dollar year adjustments to results for the following years:" ))
+```
+
+    ## [1] "The model is capable of performing dollar year adjustments to results for the following years:"
+
+``` r
+as.character(colnames(DIO[["Rho"]]))
+```
+
+    ##  [1] "2002" "2003" "2004" "2005" "2006" "2007" "2008" "2009" "2010" "2011"
+    ## [11] "2012" "2013" "2014" "2015" "2016" "2017" "2018"
+
+## Validate the Model
 
 Validate that commodity output can be recalculated (within 1%) with the
 model total requirements matrix (L) and demand vector (y) for US
 production
 
 ``` r
-library(useeior)
 econval <- compareOutputandLeontiefXDemand(DIO, tolerance = 0.01)
 print(paste("Number of sectors passing:",econval$N_Pass))
 ```
