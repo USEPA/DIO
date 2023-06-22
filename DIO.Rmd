@@ -19,7 +19,7 @@ if (!"devtools"%in%installed.packages()[, "Package"]) {
 }
 library(devtools)
 
-#devtools::install_github("USEPA/useeior@v1.1.0")
+devtools::install_github("USEPA/useeior@v1.1.1")
 # devtools::load_all("../useeior")
 
 ## Build the model using useeior
