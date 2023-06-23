@@ -17,9 +17,9 @@ params:
 #if (!"devtools"%in%installed.packages()[, "Package"]) {
 #    install.packages("devtools")
 #}
-#library(devtools)
+library(devtools)
 
-#devtools::install_github("USEPA/useeior@v1.1.0")
+devtools::install_github("USEPA/useeior@v1.1.1")
 # devtools::load_all("../useeior")
 
 ## Build the model using useeior
@@ -41,6 +41,8 @@ DIO <- useeior::buildModel(params$modelname, configpaths)
 ```
 
 Write the model to Excel and a log to a log file
+
 ```{r, include=FALSE}
 useeior::writeModeltoXLSX(DIO,"model/DIOv2.xlsx")
 ```
+
