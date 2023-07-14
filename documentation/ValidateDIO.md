@@ -6,7 +6,7 @@ library(useeior)
 packageVersion("useeior")
 ```
 
-    ## [1] '1.2.0'
+    ## [1] '1.2.2'
 
 ``` r
 # Read the built DIO v2.0 model
