@@ -19,7 +19,7 @@ params:
 #}
 library(devtools)
 
-devtools::install_github("USEPA/useeior@v1.1.1")
+devtools::install_github("USEPA/useeior@v1.2.2")
 # devtools::load_all("../useeior")
 
 ## Build the model using useeior
@@ -28,7 +28,7 @@ library(logging)
 # Identify the model specifications file for the selected DIO model
 modelspec <- paste0(params$modelname, ".yml")
 hybridspec <- "DIOProcesses.yml"
-configpaths <- file.path("data", c(modelspec,hybridspec,NULL))
+configpaths <- file.path("data", c(modelspec, hybridspec))
 
 log_file <- "model/build_and_save_DIO_model.log"
 if (file.exists(log_file)){
@@ -37,12 +37,16 @@ if (file.exists(log_file)){
 addHandler(writeToFile, file=log_file)
 
 DIO <- useeior::buildModel(params$modelname, configpaths)
+saveRDS(DIO, "model/DIO.rds")
 
 ```
 
 Write the model to Excel and a log to a log file
 
 ```{r, include=FALSE}
-useeior::writeModeltoXLSX(DIO,"model/DIOv2.xlsx")
+# See Issue 7 (https://github.com/USEPA/DIO/issues/7)
+# which will cause writing model to fail due to checkNamesandOrdering()
+
+useeior::writeModeltoXLSX(DIO,"model")
 ```
 
