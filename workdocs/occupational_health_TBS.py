@@ -72,4 +72,4 @@ def generate_OH_totals(file, years):
     return df_total.reindex(columns=cols)
 
 df_illness = generate_OH_totals(file=f'{repo}/{file}', years=years)
-df_illness.to_csv('Huang_Occupational_Health_illness.csv', index=False)
+df_illness.to_csv('data/Huang_Occupational_Health_illness.csv', index=False)
