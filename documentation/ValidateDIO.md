@@ -25,7 +25,7 @@ print(paste("The model name is", DIO$specs$Model))
 print(paste("The model has",length(DIO$Commodities$Code), "commodities,", length(DIO$SatelliteTables$flows$Flowable), "unique flows, and",length(DIO$Indicators$meta$Name), "indicators."))
 ```
 
-    ## [1] "The model has 807 commodities, 5185 unique flows, and 39 indicators."
+    ## [1] "The model has 807 commodities, 5186 unique flows, and 39 indicators."
 
 ``` r
 print(paste("The model IO Year is",DIO$specs$IOYear))
@@ -80,7 +80,7 @@ modelval <- compareEandLCIResult(DIO, tolerance = 0.01)
 print(paste("Number of flow totals by commodity passing:",modelval$N_Pass))
 ```
 
-    ## [1] "Number of flow totals by commodity passing: 2030751"
+    ## [1] "Number of flow totals by commodity passing: 2031162"
 
 ``` r
 print(paste("Number of flow totals by commodity failing:",modelval$N_Fail))
