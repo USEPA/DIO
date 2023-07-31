@@ -368,27 +368,6 @@ SatelliteTable:
         DataYear: 2017
         URL: "https://rcrapublic.epa.gov/rcrainfoweb/action/modules/br/main/broverview"
         Primary: TRUE       
-  OHILL:
-    FullName: "Occupational health, illness and injury"
-    Abbreviation: "OHILL"
-    StaticSource: TRUE
-    # StaticFile: "data/Huang_Occupational_Health_illness.csv" # when feature available for external satellite tables
-    # FileLocation: ""
-    StaticFile: "useeior/Huang_Occupational_Health_illness.csv"
-    FileLocation: "DataCommons"
-    DataYears: [2018]
-    Locations: ["US"]
-    SectorListSource: "BEA"
-    SectorListYear: 2012
-    SectorListLevel: "Detail"
-    OriginalFlowSource: "FEDEFL" #Set to FEDEFL to skip mapping. "Survey of Occupational Injuries and Illnesses"
-    DataSources:
-      huang_system_2023:
-        Title: "System Approach for Characterizing and Evaluating Factors for Occupational Health Impacts Due to Nonfatal Injuries and Illnesses for the Use in Life Cycle Assessment"
-        Author: "Huang et al."
-        DataYear: 2023
-        URL: "https://doi.org/10.1021/acs.est.3c00188"
-        Primary: TRUE
   EMP:
     FullName: "Employment"
     Abbreviation: "EMP"
@@ -886,26 +865,6 @@ Indicators:
         Author: "Huijbregts et al."
         DataYear: NA
         URL: "https://doi.org/10.1007/s11367-016-1246-y"
-        Primary: TRUE
-  OHIllness:
-    Name: "Occupational health, injury and illness"
-    Code: ""
-    Group: "DIO Endpoint"
-    Unit: "DALY"
-    SimpleUnit: ""
-    SimpleName: ""
-    StaticSource: TRUE
-    StaticFile: "lciafmt/OccupationalHealth_LCIA_v1.0.4.parquet"
-    FileLocation: "DataCommons"
-    ScriptFunctionCall: "getImpactMethod"
-    ScriptFunctionParameters:
-      indicators: ["Injury and illness"]
-    DataSources:
-      huang_system_2023:
-        Title: "System Approach for Characterizing and Evaluating Factors for Occupational Health Impacts Due to Nonfatal Injuries and Illnesses for the Use in Life Cycle Assessment"
-        Author: "Huang et al."
-        DataYear: 2023
-        URL: "https://doi.org/10.1021/acs.est.3c00188"
         Primary: TRUE
   ClimateChangeValuation:
     Name: "Climate change - Valuation"
