@@ -38,7 +38,7 @@ SatelliteTable:
     FullName: "Criteria and Hazardous Air Emissions"
     Abbreviation: "CHAIR"
     StaticSource: TRUE
-    StaticFile: "flowsa/FlowBySector/CAP_HAP_national_2017_m2_v2.0.0_a52db57" # secondary contexts
+    StaticFile: "flowsa/FlowBySector/CAP_HAP_national_2017_m2_v2.0.0_a52db57.parquet" # secondary contexts
     FileLocation: "DataCommons"
     DataYears: [2017]
     Locations: ["US"]
@@ -886,6 +886,26 @@ Indicators:
         Author: "Huijbregts et al."
         DataYear: NA
         URL: "https://doi.org/10.1007/s11367-016-1246-y"
+        Primary: TRUE
+  OHIllness:
+    Name: "Occupational health, injury and illness"
+    Code: ""
+    Group: "DIO Endpoint"
+    Unit: "DALY"
+    SimpleUnit: ""
+    SimpleName: ""
+    StaticSource: TRUE
+    StaticFile: "lciafmt/OccupationalHealth_LCIA_v1.0.4.parquet"
+    FileLocation: "DataCommons"
+    ScriptFunctionCall: "getImpactMethod"
+    ScriptFunctionParameters:
+      indicators: ["Injury and illness"]
+    DataSources:
+      huang_system_2023:
+        Title: "System Approach for Characterizing and Evaluating Factors for Occupational Health Impacts Due to Nonfatal Injuries and Illnesses for the Use in Life Cycle Assessment"
+        Author: "Huang et al."
+        DataYear: 2023
+        URL: "https://doi.org/10.1021/acs.est.3c00188"
         Primary: TRUE
   ClimateChangeValuation:
     Name: "Climate change - Valuation"
